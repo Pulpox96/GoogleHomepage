@@ -1,9 +1,170 @@
-body{
-    background-color: grey;
+html{
+    height: 100%;
+    min-height: 100%;
+
 }
 
-header{
-     display: grid;
-     grid-template-columns:1fr 10px 10px 10px;   
-     grid-template-rows: auto;
+
+a {
+    text-decoration: none;
+    color: rgba(0,0,0,0.87);
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Header section*/
+
+#header{
+    display: grid;
+    grid-template-columns:1fr 60px 75px 60px;   
+    grid-template-rows: 30px;
+    grid-template-areas: 
+    ". gmail imagenes google-apps";
+    grid-area: header;
+
+}
+
+
+#gmail{
+    grid-area: gmail;
+    justify-self: left;
+    width: 30px;
+}
+
+#imagenes{
+    grid-area: imagenes;
+    justify-self: left;
+    align-self: top;
+    width: 30px;
+    font-size: small;
+}
+
+#google-apps{
+    grid-area: google-apps;
+    justify-self: center;
+}
+/*Main section */
+#main{
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 300px 50px 70px 300px;
+    /*justify-self: center;*/
+    grid-template-areas: 
+    ". logo ."
+    ". input ."
+    ". flexbox ."
+    ". languages .";
+}
+
+#logo{
+    grid-area: logo;
+    justify-self: center;
+    align-self: end;
+    padding-bottom: 20px;
+    
+}
+
+#input{
+    height: 30px; 
+    width: 80%; 
+    grid-area: input;
+    justify-self: center; 
+    border: 1px solid rgba(0, 0, 0, 0.151);
+    border-radius: 30px;
+}
+#input:hover{
+    box-shadow: 1px 1px 5px grey ;
+}
+
+#flexbox{
+    display: flexbox;
+    grid-area: flexbox;
+    justify-self: center;
+    align-self: center;
+}
+
+#buscar-btn{
+    grid-area: buscar;
+    height: 50px;
+    width: 150px;
+    border: none;
+    font-size: 15px;
+    color: #5F6368;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+}
+#suerte-btn{
+    grid-area: suerte;
+    height: 50px; 
+    width: 185px;
+    align-self: center;
+    justify-self: center;
+    border: none;
+    font-size: 15px;
+    color: #5F6368;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+
+}
+
+
+#buscar-btn:hover{
+    border: 1px solid rgba(0, 0, 0, 0.575);
+}
+
+#suerte-btn:hover{
+    border: 1px solid rgba(0, 0, 0, 0.575);
+}
+
+
+#languages{
+    grid-area: languages;
+    justify-self: center;
+    font-family: Arial, Helvetica, sans-serif; 
+}
+
+#footer{
+    position: absolute;
+    bottom: 0;
+    display: grid;
+    grid-area: footer;
+    grid-template-columns: 100px 100px 300px 1100px 100px 100px 100px;
+    grid-template-rows: 50px;
+    grid-template-areas: 
+    "negocios sobre-google funciona-busqueda . privacidad condiciones preferencias";
+    
+}
+
+
+#negocios{
+    grid-area: negocios;
+    justify-self: center;
+    align-self: center;
+}
+#sobre-google{
+    grid-area: sobre-google;
+    justify-self: center;
+    align-self: center;
+}
+#funciona-busqueda{
+    grid-area: funciona-busqueda;
+    justify-self: flex-start;
+    padding-left: 10px;
+    align-self: center;
+}
+#privacidad{
+    grid-area: privacidad;
+    justify-self: center;
+    align-self: center;
+}
+#condiciones{
+    grid-area: condiciones;
+    justify-self: center;
+    align-self: center;
+}
+#preferencias{
+    grid-area: preferencias;
+    justify-self: center;
+    align-self: center;
 }
